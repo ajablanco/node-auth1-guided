@@ -1,6 +1,8 @@
 const router = require("express").Router();
 
-const Users = require("./users-model.js");
+const Users = require("../users/users-model.js");
+
+
 
 router.get("/", (req, res) => {
   Users.find()
@@ -9,5 +11,7 @@ router.get("/", (req, res) => {
     })
     .catch(err => res.send(err));
 });
+
+
 
 module.exports = router;
